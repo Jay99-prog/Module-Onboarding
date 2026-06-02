@@ -8,20 +8,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <header>
-      <h1>Product Pick</h1>
+    <header>T-shirt Order Form
+      <h1>T-shirt Order Form</h1>
     </header>
     <main>
       <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
-      </form>
-    </main>
-    <footer>
+        <!-- Name -->
+        <label for="name">Full Name</label>
+        <input 
+         type="text"
+         id="name"
+         required
+         minlength="2"
+        >
+
+        <!--EMAIL ADDRESS" -->
+        <label for="email">Email Address</label>
+        <input
+         type="email"
+         id="email"
+         name="email"
+         required
+        >
+
+        <!-- COLOUR -->
+        <p>Choose a colour:</p>
+
+        <label>
+          <input type="radio" name="colour" value="pink" required>
+          Pink
+        </label>
+
+        <label>
+          <input type="radio" name="colour" value="black" required>
+          Black
+        </label>
+
+        <label>
+          <input type="radio" name="colour" value="blue" required>
+          Blue
+        </label>
+
+        <!-- SIZE -->
+        <label for="size">SIZE</label>
+        <select id="size" name="size" required>
+          <option value="">-- Select Size --</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+
+      <!--
+      FORM REQUIREMENTS:
+      1. Collect customer's full name
+         - Must be at least 2 characters long
+         - Cannot be empty
+
+      2. Collect customer's email
+         - Must be a valid email format
+         - Field is required
+
+      3. Choose T-shirt colour
+         - Must select ONE option only
+         - Only 3 allowed options provided
+         - Cannot enter custom colours
+
+      4. Choose T-shirt size
+         - Must select ONE option
+         - Options: XS, S, M, L, XL, XXL
+         - Field is required
+
+      5. All fields are required before submission
+
+      6. No JavaScript allowed... only HTML form validation
+     -->
       <!-- change to your name-->
-      <p>By HOMEWORK SOLUTION</p>
+      <p>By Juanita Nwachukwu</p>
     </footer>
   </body>
 </html>
