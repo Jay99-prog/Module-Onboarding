@@ -1,67 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My form exercise</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header>T-shirt Order Form
-      <h1>T-shirt Order Form</h1>
-    </header>
-    <main>
-      <form>
-        <!-- Name -->
-        <label for="name">Full Name</label>
-        <input 
-         type="text"
-         id="name"
-         required
-         minlength="5"
-        >
-
-        <!--EMAIL ADDRESS" -->
-        <label for="email">Email Address</label>
-        <input
-         type="email"
-         id="email"
-         name="email"
-         required
-        >
-
-        <!-- COLOUR -->
-        <p>Choose a colour:</p>
-
-        <label>
-          <input type="radio" name="colour" value="pink" required>
-          Pink
-        </label>
-
-        <label>
-          <input type="radio" name="colour" value="black" required>
-          Black
-        </label>
-
-        <label>
-          <input type="radio" name="colour" value="blue" required>
-          Blue
-        </label>
-
-        <!-- SIZE -->
-        <label for="size">SIZE</label>
-        <select id="size" name="size" required>
-          <option value="">-- Select Size --</option>
-          <option value="XS">XS</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-          <option value="XXL">XXL</option>
-        </select>
-
-      <!--
+    <!--
       FORM REQUIREMENTS:
       1. Collect customer's full name
          - Must be at least 2 characters long
@@ -81,12 +29,102 @@
          - Options: XS, S, M, L, XL, XXL
          - Field is required
 
-      5. All fields are required before submission
+      5. All fields required before submission
 
       6. No JavaScript allowed... only HTML form validation
      -->
-      <!-- change to your name-->
-      <p>By Juanita Nwachukwu</p>
-    </footer>
-  </body>
+  <header>
+    <h1>T-Shirt Order Form</h1>
+  </header>
+
+  <main>
+    <form>
+
+      <!-- Name -->
+      <label for="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+        minlength="2"
+        pattern=".*\S.*\S.*"
+      >
+
+      <!-- Email -->
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      >
+
+      <!-- Colour Selection -->
+      <fieldset>
+        <legend>Choose a colour</legend>
+
+        <label>
+          <input
+            type="radio"
+            name="colour"
+            value="pink"
+            required
+          >
+          Pink
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="colour"
+            value="black"
+          >
+          Black
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="colour"
+            value="blue"
+          >
+          Blue
+        </label>
+      </fieldset>
+
+      <!-- Size Selection -->
+      <fieldset>
+        <legend>Select a size</legend>
+
+        <label for="size">Size</label>
+
+        <select
+          id="size"
+          name="size"
+          required
+        >
+          <option value="">-- Select Size --</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+        </select>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Order</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>By Juanita Nwachukwu</p>
+  </footer>
+
+</body>
 </html>
